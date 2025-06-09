@@ -54,8 +54,18 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-secondary/30">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="relative py-24 bg-secondary/30 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=1200&h=800&fit=crop&crop=center"
+          alt="Professional consultation meeting"
+          className="w-full h-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-secondary/80"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Get In Touch
@@ -126,7 +136,7 @@ const Contact = () => {
                 <a
                   key={index}
                   href={info.action}
-                  className="flex items-center p-6 bg-card rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group"
+                  className="flex items-center p-6 bg-card/70 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group"
                 >
                   <div className="p-3 bg-primary/10 rounded-full mr-4 group-hover:bg-primary/20 transition-colors">
                     <info.icon className="h-6 w-6 text-primary" />
@@ -141,7 +151,7 @@ const Contact = () => {
               ))}
             </div>
 
-            <Card className="border-0 bg-gradient-to-br from-primary/10 to-secondary/10 shadow-xl">
+            <Card className="border-0 bg-gradient-to-br from-primary/10 to-secondary/10 backdrop-blur-sm shadow-xl">
               <CardContent className="p-8">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Why Choose Trinity?</h3>
                 <ul className="space-y-3">

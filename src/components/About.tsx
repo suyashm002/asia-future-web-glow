@@ -74,6 +74,16 @@ const About = () => {
           </div>
 
           <div className="space-y-8">
+            {/* Team Image */}
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&h=400&fit=crop&crop=center"
+                alt="Trinity Consulting team collaboration"
+                className="rounded-xl shadow-lg w-full hover:shadow-xl transition-shadow duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent rounded-xl"></div>
+            </div>
+
             <div className="grid grid-cols-2 gap-6">
               {stats.map((stat, index) => (
                 <div 
@@ -88,11 +98,20 @@ const About = () => {
               ))}
             </div>
 
-            <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-foreground mb-4">Our Mission</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                To empower organizations with strategic insights and innovative solutions that drive sustainable growth, operational excellence, and lasting competitive advantage in the global marketplace.
-              </p>
+            <div className="relative bg-gradient-to-r from-primary/10 to-secondary/10 p-8 rounded-xl overflow-hidden">
+              <div className="absolute inset-0">
+                <img 
+                  src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=400&h=300&fit=crop&crop=center"
+                  alt="Modern office environment"
+                  className="w-full h-full object-cover opacity-20"
+                />
+              </div>
+              <div className="relative z-10">
+                <h3 className="text-xl font-semibold text-foreground mb-4">Our Mission</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  To empower organizations with strategic insights and innovative solutions that drive sustainable growth, operational excellence, and lasting competitive advantage in the global marketplace.
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -9,8 +9,18 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center bg-gradient-to-br from-background via-background to-secondary/20 pt-20">
-      <div className="container mx-auto px-6">
+    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-background via-background to-secondary/20 pt-20 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&h=800&fit=crop&crop=center"
+          alt="Business team collaboration"
+          className="w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/90"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
@@ -58,17 +68,13 @@ const Hero = () => {
           </div>
 
           <div className="relative lg:block hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl transform rotate-6 animate-pulse"></div>
-            <div className="relative bg-card p-8 rounded-3xl shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-500">
-              <div className="space-y-6">
-                <div className="h-4 bg-primary/20 rounded w-3/4 animate-pulse"></div>
-                <div className="h-4 bg-secondary/30 rounded w-full animate-pulse delay-100"></div>
-                <div className="h-4 bg-primary/20 rounded w-2/3 animate-pulse delay-200"></div>
-                <div className="grid grid-cols-2 gap-4 pt-4">
-                  <div className="h-20 bg-gradient-to-br from-primary/10 to-primary/20 rounded-lg animate-pulse delay-300"></div>
-                  <div className="h-20 bg-gradient-to-br from-secondary/10 to-secondary/20 rounded-lg animate-pulse delay-400"></div>
-                </div>
-              </div>
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop&crop=center"
+                alt="Business analytics and strategy"
+                className="rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl"></div>
             </div>
           </div>
         </div>
