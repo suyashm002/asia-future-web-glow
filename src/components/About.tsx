@@ -9,6 +9,13 @@ const About = () => {
     { icon: TrendingUp, value: "98%", label: "Success Rate" }
   ];
 
+  const featuredClients = [
+    { name: "Frozo.ai", url: "https://www.frozo.ai/" },
+    { name: "Global Tech Corp" },
+    { name: "Innovation Partners" },
+    { name: "Strategic Solutions Ltd" }
+  ];
+
   return (
     <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-6">
@@ -41,6 +48,28 @@ const About = () => {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-2xl font-semibold text-foreground">Featured Clients</h3>
+              <div className="grid grid-cols-2 gap-3">
+                {featuredClients.map((client, index) => (
+                  <div key={index} className="text-center p-3 bg-card rounded-lg hover:shadow-md transition-shadow duration-300">
+                    {client.url ? (
+                      <a 
+                        href={client.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                      >
+                        {client.name}
+                      </a>
+                    ) : (
+                      <span className="text-muted-foreground">{client.name}</span>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
