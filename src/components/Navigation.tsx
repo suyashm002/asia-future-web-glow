@@ -32,13 +32,20 @@ const Navigation = () => {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            {['Home', 'Services', 'About', 'Contact'].map((item) => (
+            {[
+              { name: 'Home', id: 'home' },
+              { name: 'Services', id: 'services' },
+              { name: 'Tech Services', id: 'tech-services' },
+              { name: 'HR Services', id: 'hr-services' },
+              { name: 'About', id: 'about' },
+              { name: 'Contact', id: 'contact' }
+            ].map((item) => (
               <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
+                key={item.name}
+                onClick={() => scrollToSection(item.id)}
                 className="text-foreground hover:text-primary transition-colors duration-200 relative group"
               >
-                {item}
+                {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
@@ -56,13 +63,20 @@ const Navigation = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 animate-fade-in">
-            {['Home', 'Services', 'About', 'Contact'].map((item) => (
+            {[
+              { name: 'Home', id: 'home' },
+              { name: 'Services', id: 'services' },
+              { name: 'Tech Services', id: 'tech-services' },
+              { name: 'HR Services', id: 'hr-services' },
+              { name: 'About', id: 'about' },
+              { name: 'Contact', id: 'contact' }
+            ].map((item) => (
               <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
+                key={item.name}
+                onClick={() => scrollToSection(item.id)}
                 className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors duration-200"
               >
-                {item}
+                {item.name}
               </button>
             ))}
           </div>
