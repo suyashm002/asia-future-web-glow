@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Contact</h4>
             <div className="space-y-2 text-background/80">
-              <p>contact@trinityconsulting.com</p>
+              <p>sales@techbros.sg</p>
               <p>+65 8165 6378</p>
               <p>Shenton Way, #07-03, Shenton House, Singapore - 068805</p>
             </div>

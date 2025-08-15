@@ -36,8 +36,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      info: "contact@trinityconsulting.com",
-      action: "mailto:contact@trinityconsulting.com"
+      info: "sales@techbros.sg",
+      action: "mailto:sales@techbros.sg"
     },
     {
       icon: Phone,
