@@ -31,8 +31,8 @@ const Footer = () => {
             <h4 className="text-lg font-semibold">Contact</h4>
             <div className="space-y-2 text-background/80">
               <p>contact@trinityconsulting.com</p>
-              <p>+1 (555) 123-4567</p>
-              <p>123 Business District, Singapore</p>
+              <p>+65 8165 6378</p>
+              <p>Shenton Way, #07-03, Shenton House, Singapore - 068805</p>
             </div>
           </div>
         </div>

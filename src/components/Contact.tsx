@@ -42,13 +42,13 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      info: "+1 (555) 123-4567",
-      action: "tel:+15551234567"
+      info: "+65 8165 6378",
+      action: "tel:+6581656378"
     },
     {
       icon: MapPin,
       title: "Office",
-      info: "123 Business District, Singapore",
+      info: "Shenton Way, #07-03, Shenton House, Singapore - 068805",
       action: "#"
     }
   ];
